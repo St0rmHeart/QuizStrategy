@@ -37,7 +37,7 @@ public partial class MenuPage : ContentPage
     {
         try
         {
-            throw new NotImplementedException();
+            Application.Current.MainPage = new GamePage();
         }
         catch (Exception ex)
         {
@@ -48,7 +48,7 @@ public partial class MenuPage : ContentPage
     {
         try
         {
-            throw new NotImplementedException();
+            Application.Current.MainPage = new GamePage();
         }
         catch (Exception ex)
         {
