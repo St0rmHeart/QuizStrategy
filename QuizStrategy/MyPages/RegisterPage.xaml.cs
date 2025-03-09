@@ -24,7 +24,7 @@ public partial class RegisterPage : ContentPage
     {
         try
         {
-            throw new NotImplementedException();
+            Application.Current.MainPage = new MenuPage();
         }
         catch (Exception ex)
         {

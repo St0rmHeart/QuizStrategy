@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizStrategy.MenuPage"
+             Title="MenuPage"
+             BackgroundColor="#000000"
+             Padding="10">
+    <ScrollView x:Name="MainScrollView"
+                VerticalOptions="Fill">
+        <Grid x:Name="MainGrid"
+              RowDefinitions="Auto, Auto, *, Auto"
+              RowSpacing="20"
+              HorizontalOptions="Center"
+              VerticalOptions="Fill">
+
+            <!-- Надпись "Quiz Strategy" -->
+            <Label x:Name="QuizStrategyLabel"
+                   Grid.Row="0"
+                   Text="Quiz Strategy"
+                   TextColor="#FFFFFF"
+                   FontSize="48"
+                   FontFamily="OpenSansRegular"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/> 
+
+            <!-- Изображение карты мира -->
+            <Image x:Name="WorldMapImage"
+                   Grid.Row="1"
+                   Source="worldmap.png"
+                   WidthRequest="406"
+                   HeightRequest="270"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"/> 
+
+            <!-- Пустая строка для растяжки -->
+            <BoxView x:Name="SpacerBoxView"
+                     Grid.Row="2"
+                     BackgroundColor="Transparent"/>
+
+            <!-- Серый контейнер -->
+            <Frame x:Name="GrayContainerFrame"
+                   Grid.Row="3"
+                   BackgroundColor="#535353"
+                   BorderColor="Transparent"
+                   CornerRadius="10"
+                   Padding="10"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Start">
+
+                <VerticalStackLayout x:Name="FormStackLayout"
+                                     Spacing="10">
+
+                    <!-- Надпись "Регистрация" -->
+                    <Label x:Name="RegisterTitleLabel"
+                           Text="ГЛАВНОЕ МЕНЮ"
+                           TextColor="#FFFFFF"
+                           FontSize="40"
+                           FontFamily="OpenSansRegular"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
+
+                    <!-- Краткая статистика -->
+                    <Frame x:Name="StatFrame"
+                           BackgroundColor="Transparent"
+                           BorderColor="Transparent"
+                           CornerRadius="10"
+                           Padding="0, 15, 0, 15"
+                           HorizontalOptions="Fill">
+                        
+                           <VerticalStackLayout x:Name="GameModeLayout"
+                                                Spacing="0">
+                                <Label x:Name="UserNameLabel"
+                                       Text="Пользователь: Иван"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"/>
+                               
+                                <Label x:Name="UserRaitingLabel"
+                                       Text="Рейтинг: 1234"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"/>
+                               
+                                <Label x:Name="UserTopLabel"
+                                       Text="Топ: 12%"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Кнопки -->
+                    <Grid x:Name="ButtonsGrid"
+                          ColumnDefinitions="*,*"
+                          ColumnSpacing="10"
+                          HorizontalOptions="Fill">
+                        <!-- Кнопка "МЕНЮ логина" -->
+                        <Button x:Name="ToRatingGameButton"
+                                Grid.Column="0"
+                                Text="Обычная игра"
+                                LineBreakMode="WordWrap"
+                                BackgroundColor="#FFFFFF"
+                                CornerRadius="10"
+                                HeightRequest="50"
+                                HorizontalOptions="Fill"
+                                TextColor="#000000"
+                                FontSize="18"
+                                FontFamily="OpenSansBold"
+                                Pressed="Button_Pressed"
+                                Released="Button_Released"
+                                Clicked="ToRatingGameButton_Clicked"/>
+                        
+                        <!-- Кнопка "ВХОД" -->
+                        <Button x:Name="ToCustomGameButton"
+                                Grid.Column="1"
+                                Text="Игра с друзьями"
+                                LineBreakMode="WordWrap"
+                                BackgroundColor="#FFFFFF"
+                                CornerRadius="10"
+                                HeightRequest="50"
+                                HorizontalOptions="Fill"
+                                TextColor="#000000"
+                                FontSize="18"
+                                FontFamily="OpenSansBold"
+                                Pressed="Button_Pressed"
+                                Released="Button_Released"
+                                Clicked="ToCustomGameButton_Clicked"/>
+
+                    </Grid>
+                    <!-- Кнопка "МЕНЮ логина" -->
+                    <Button x:Name="ToStatButton"
+                            Text="Статитика аккаунта"
+                            LineBreakMode="WordWrap"
+                            BackgroundColor="#FFFFFF"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            HorizontalOptions="Fill"
+                            TextColor="#000000"
+                            FontSize="20"
+                            FontFamily="OpenSansBold"
+                            Pressed="Button_Pressed"
+                            Released="Button_Released"
+                            Clicked="ToStatButton_Clicked"/>
+
+                    <!-- Кнопка "ВХОД" -->
+                    <Button x:Name="ToSettingsButton"
+                            Text="Настройки профиля"
+                            LineBreakMode="WordWrap"
+                            BackgroundColor="#FFFFFF"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            HorizontalOptions="Fill"
+                            TextColor="#000000"
+                            FontSize="20"
+                            FontFamily="OpenSansBold"
+                            Pressed="Button_Pressed"
+                            Released="Button_Released"
+                            Clicked="ToSettingsButton_Clicked"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

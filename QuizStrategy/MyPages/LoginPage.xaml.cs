@@ -24,8 +24,7 @@ public partial class LoginPage : ContentPage
     {
         try
         {
-            // Заменяем MainPage на RegisterPage
-            throw new NotImplementedException();
+            Application.Current.MainPage = new MenuPage();
         }
         catch (Exception ex)
         {
