@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizStrategy.LoginPage"
+             BackgroundColor="#000000"
+             Padding="10">
+
+    <ScrollView x:Name="MainScrollView"
+                VerticalOptions="Fill">
+        <Grid x:Name="MainGrid"
+              RowDefinitions="Auto, Auto, *, Auto"
+              RowSpacing="20"
+              HorizontalOptions="Center"
+              VerticalOptions="Fill">
+
+            <!-- Надпись "Quiz Strategy" -->
+            <Label x:Name="QuizStrategyLabel"
+                   Grid.Row="0"
+                   Text="Quiz Strategy"
+                   TextColor="#FFFFFF"
+                   FontSize="48"
+                   FontFamily="OpenSansRegular"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <!-- Изображение карты мира -->
+            <Image x:Name="WorldMapImage"
+                   Grid.Row="1"
+                   Source="worldmap.png"
+                   WidthRequest="406"
+                   HeightRequest="270"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"/>
+
+            <!-- Пустая строка для растяжки -->
+            <BoxView x:Name="SpacerBoxView"
+                     Grid.Row="2"
+                     BackgroundColor="Transparent"/>
+
+            <!-- Серый контейнер -->
+            <Frame x:Name="GrayContainerFrame"
+                   Grid.Row="3"
+                   BackgroundColor="#535353"
+                   BorderColor="Transparent"
+                   CornerRadius="10"
+                   Padding="10"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Start">
+
+                <VerticalStackLayout x:Name="FormStackLayout"
+                                     Spacing="5">
+
+                    <!-- Надпись "ЛОГИН" -->
+                    <Label x:Name="LoginTitleLabel"
+                           Text="ЛОГИН"
+                           TextColor="#FFFFFF"
+                           FontSize="48"
+                           FontFamily="OpenSansRegular"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
+
+                    <!-- Поле логина -->
+                    <Label x:Name="LoginFieldLabel"
+                           Text="ЛОГИН"
+                           TextColor="#FFFFFF"
+                           FontSize="28"
+                           FontFamily="OpenSansRegular"
+                           VerticalTextAlignment="Center"/>
+                    <Frame x:Name="LoginFieldFrame"
+                           BackgroundColor="#FFFFFF"
+                           CornerRadius="10"
+                           Padding="0"
+                           HorizontalOptions="Fill">
+                        <Entry x:Name="LoginEntry"
+                               BackgroundColor="Transparent"
+                               HorizontalOptions="Fill"
+                               HeightRequest="50"
+                               FontSize="28" />
+                    </Frame>
+
+                    <!-- Поле пароля -->
+                    <Label x:Name="PasswordFieldLabel"
+                           Text="ПАРОЛЬ"
+                           TextColor="#FFFFFF"
+                           FontSize="28"
+                           FontFamily="OpenSansRegular"
+                           VerticalTextAlignment="Center"/>
+                    <Frame x:Name="PasswordFieldFrame"
+                           BackgroundColor="#FFFFFF"
+                           CornerRadius="10"
+                           Padding="5"
+                           HorizontalOptions="Fill">
+                        <Entry x:Name="PasswordEntry"
+                               BackgroundColor="Transparent"
+                               HorizontalOptions="Fill"
+                               HeightRequest="50"
+                               FontSize="28"
+                               IsPassword="True"/>
+                    </Frame>
+
+                    <!-- Кнопки -->
+                    <Grid x:Name="ButtonsGrid"
+                          ColumnDefinitions="*,*"
+                          ColumnSpacing="10"
+                          HorizontalOptions="Fill"
+                          Margin="0,20,0,0">
+                        <!-- Кнопка "МЕНЮ РЕГИСТРАЦИИ" -->
+                        <Button x:Name="RegisterButton"
+                                Grid.Column="0"
+                                Text="МЕНЮ РЕГИСТРАЦИИ"
+                                LineBreakMode="WordWrap"
+                                BackgroundColor="#FFFFFF"
+                                CornerRadius="10"
+                                HeightRequest="80"
+                                HorizontalOptions="Fill"
+                                TextColor="#000000"
+                                FontSize="20"
+                                FontFamily="OpenSansBold"
+                                Pressed="RegisterButton_Pressed"
+                                Released="RegisterButton_Released"
+                                Clicked="RegisterButton_Clicked" />
+
+                        <!-- Кнопка "ВХОД" -->
+                        <Button x:Name="LoginButton"
+                                Grid.Column="1"
+                                Text="ВХОД"
+                                BackgroundColor="#FFFFFF"
+                                CornerRadius="10"
+                                HeightRequest="80"
+                                HorizontalOptions="Fill"
+                                TextColor="#000000"
+                                FontSize="24"
+                                FontFamily="OpenSansBold"
+                                Pressed="LoginButton_Pressed"
+                                Released="LoginButton_Released" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>
