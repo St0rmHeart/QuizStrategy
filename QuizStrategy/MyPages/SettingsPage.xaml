@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizStrategy.SettingsPage"
+             Title="SettingsPage"
+             BackgroundColor="#000000"
+             Padding="10">
+    
+    <ScrollView x:Name="MainScrollView"
+                VerticalOptions="Fill">
+        
+        <Grid x:Name="MainGrid"
+              RowDefinitions="Auto, Auto, *, Auto"
+              RowSpacing="20"
+              HorizontalOptions="Center"
+              VerticalOptions="Fill">
+
+            <!-- Надпись "Quiz Strategy" -->
+            <Label x:Name="QuizStrategyLabel"
+                   Grid.Row="0"
+                   Text="Quiz Strategy"
+                   TextColor="#FFFFFF"
+                   FontSize="48"
+                   FontFamily="OpenSansRegular"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <!-- Изображение карты мира -->
+            <Image x:Name="WorldMapImage"
+                   Grid.Row="1"
+                   Source="worldmap.png"
+                   WidthRequest="406"
+                   HeightRequest="160"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"/> 
+
+            <!-- Пустая строка для растяжки -->
+            <BoxView x:Name="SpacerBoxView"
+                     Grid.Row="2"
+                     BackgroundColor="Transparent"/>
+
+            <!-- Серый контейнер -->
+            <Frame x:Name="GrayContainerFrame"
+                   Grid.Row="3"
+                   BackgroundColor="#535353"
+                   BorderColor="Transparent"
+                   CornerRadius="10"
+                   Padding="10"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Start">
+
+                <VerticalStackLayout x:Name="FormStackLayout"
+                                     Spacing="5">
+
+                    <!-- Надпись "Регистрация" -->
+                    <Label x:Name="RegisterTitleLabel"
+                           Text="НАСТРОЙКИ"
+                           TextColor="#FFFFFF"
+                           FontSize="48"
+                           FontFamily="OpenSansRegular"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"/>
+
+                    <!-- Поле Никнейма -->
+                    <Label x:Name="UserNameLabel"
+                           Text="НИКНЕЙМ"
+                           TextColor="#FFFFFF"
+                           FontSize="18"
+                           FontFamily="OpenSansRegular"
+                           VerticalTextAlignment="Center"/>
+
+                    <Frame x:Name="UserNameFieldFrame"
+                           BackgroundColor="#FFFFFF"
+                           CornerRadius="10"
+                           Padding="0"
+                           HorizontalOptions="Fill">
+                        <Entry x:Name="UserNameEntry"
+                               BackgroundColor="Transparent"
+                               HorizontalOptions="Fill"
+                               HeightRequest="45"
+                               FontSize="20" />
+                    </Frame>
+
+                    <!-- Поле логина -->
+                    <Label x:Name="LoginLabel"
+                           Text="ЛОГИН"
+                           TextColor="#FFFFFF"
+                           FontSize="18"
+                           FontFamily="OpenSansRegular"
+                           VerticalTextAlignment="Center"/>
+
+                    <Frame x:Name="LoginFieldFrame"
+                           BackgroundColor="#FFFFFF"
+                           CornerRadius="10"
+                           Padding="0"
+                           HorizontalOptions="Fill">
+                        <Entry x:Name="LoginEntry"
+                               BackgroundColor="Transparent"
+                               HorizontalOptions="Fill"
+                               HeightRequest="45"
+                               FontSize="20" />
+                    </Frame>
+
+                    <!-- Поле пароля -->
+                    <Label x:Name="PasswordFieldLabel"
+                       Text="ПАРОЛЬ"
+                       TextColor="#FFFFFF"
+                       FontSize="18"
+                       FontFamily="OpenSansRegular"
+                       VerticalTextAlignment="Center"/>
+                    <Frame x:Name="PasswordFieldFrame"
+                       BackgroundColor="#FFFFFF"
+                       CornerRadius="10"
+                       Padding="0"
+                       HorizontalOptions="Fill">
+                        <Entry x:Name="PasswordEntry"
+                           BackgroundColor="Transparent"
+                           HorizontalOptions="Fill"
+                           HeightRequest="45"
+                           FontSize="20"
+                           IsPassword="True"/>
+                    </Frame>
+
+                    <!-- Поле подтверждения пароля -->
+                    <Label x:Name="PasswordConfirmFieldLabel"
+                       Text="ПОДТВЕРЖДЕНИЕ ПАРОЛЯ"
+                       TextColor="#FFFFFF"
+                       FontSize="18"
+                       FontFamily="OpenSansRegular"
+                       VerticalTextAlignment="Center"/>
+                    <Frame x:Name="PasswordConfirmFieldFrame"
+                       BackgroundColor="#FFFFFF"
+                       CornerRadius="10"
+                       Padding="0"
+                       HorizontalOptions="Fill">
+                        <Entry x:Name="PasswordConfirmEntry"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="Fill"
+                       HeightRequest="45"
+                       FontSize="20"
+                       IsPassword="True"/>
+                    </Frame>
+                    <!-- Кнопка "Применить изменения" -->
+                    <Button x:Name="ApplyChangesButton"
+                            Text="Применить изменения"
+                            LineBreakMode="WordWrap"
+                            BackgroundColor="#FFFFFF"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            
+                            HorizontalOptions="Fill"
+                            TextColor="#000000"
+                            FontSize="24"
+                            FontFamily="OpenSansBold"
+                            Pressed="Button_Pressed"
+                            Released="Button_Released"
+                            Clicked="ApplyChangesButton_Clicked"/>
+
+                    <!-- Кнопка "В главное меню" -->
+                    <Button x:Name="ToMenuButton"
+                            Text="В главное меню"
+                            LineBreakMode="WordWrap"
+                            BackgroundColor="#FFFFFF"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            HorizontalOptions="Fill"
+                            TextColor="#000000"
+                            FontSize="24"
+                            FontFamily="OpenSansBold"
+                            Pressed="Button_Pressed"
+                            Released="Button_Released"
+                            Clicked="ToMenuButton_Clicked"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

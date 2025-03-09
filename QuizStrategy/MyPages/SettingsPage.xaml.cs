@@ -1,12 +1,11 @@
 namespace QuizStrategy;
 
-public partial class MenuPage : ContentPage
+public partial class SettingsPage : ContentPage
 {
-	public MenuPage()
+	public SettingsPage()
 	{
 		InitializeComponent();
 	}
-
     private async void Button_Pressed(object sender, EventArgs e)
     {
         var button = sender as Button;
@@ -27,13 +26,7 @@ public partial class MenuPage : ContentPage
         }
     }
 
-
-
-
-
-
-
-    private void ToRatingGameButton_Clicked(object sender, EventArgs e)
+    private void ApplyChangesButton_Clicked(object sender, EventArgs e)
     {
         try
         {
@@ -44,38 +37,15 @@ public partial class MenuPage : ContentPage
             DisplayAlert("Ошибка", $"Не удалось открыть страницу: {ex.Message}", "OK");
         }
     }
-    private void ToCustomGameButton_Clicked(object sender, EventArgs e)
+    private void ToMenuButton_Clicked(object sender, EventArgs e)
     {
         try
         {
-            throw new NotImplementedException();
+            Application.Current.MainPage = new MenuPage();
         }
         catch (Exception ex)
         {
             DisplayAlert("Ошибка", $"Не удалось открыть страницу: {ex.Message}", "OK");
         }
     }
-    private void ToStatButton_Clicked(object sender, EventArgs e)
-    {
-        try
-        {
-            throw new NotImplementedException();
-        }
-        catch (Exception ex)
-        {
-            DisplayAlert("Ошибка", $"Не удалось открыть страницу: {ex.Message}", "OK");
-        }
-    }
-    private void ToSettingsButton_Clicked(object sender, EventArgs e)
-    {
-        try
-        {
-            Application.Current.MainPage = new SettingsPage();
-        }
-        catch (Exception ex)
-        {
-            DisplayAlert("Ошибка", $"Не удалось открыть страницу: {ex.Message}", "OK");
-        }
-    }
-
 }
