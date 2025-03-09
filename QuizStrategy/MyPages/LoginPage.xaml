@@ -121,7 +121,7 @@
                                 Clicked="RegisterButton_Clicked" />
 
                         <!-- Кнопка "ВХОД" -->
-                        <Button x:Name="LoginButton"
+                        <Button x:Name="ToMenuButton"
                                 Grid.Column="1"
                                 Text="ВХОД"
                                 BackgroundColor="#FFFFFF"
@@ -131,8 +131,9 @@
                                 TextColor="#000000"
                                 FontSize="24"
                                 FontFamily="OpenSansBold"
-                                Pressed="LoginButton_Pressed"
-                                Released="LoginButton_Released" />
+                                Pressed="ToMenuButton_Pressed"
+                                Released="ToMenuButton_Released"
+                                Clicked="ToMenuButton_Clicked"/>
                     </Grid>
                 </VerticalStackLayout>
             </Frame>

@@ -20,6 +20,21 @@ public partial class LoginPage : ContentPage
         }
     }
 
+    private void ToMenuButton_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
+            // Заменяем MainPage на RegisterPage
+            throw new NotImplementedException();
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("Ошибка", $"Не удалось открыть страницу: {ex.Message}", "OK");
+        }
+    }
+
+
+
     private async void RegisterButton_Pressed(object sender, EventArgs e)
     {
         var button = sender as Button;
@@ -40,7 +55,7 @@ public partial class LoginPage : ContentPage
         }
     }
 
-    private async void LoginButton_Pressed(object sender, EventArgs e)
+    private async void ToMenuButton_Pressed(object sender, EventArgs e)
     {
         var button = sender as Button;
         if (button != null)
@@ -50,7 +65,7 @@ public partial class LoginPage : ContentPage
         }
     }
 
-    private async void LoginButton_Released(object sender, EventArgs e)
+    private async void ToMenuButton_Released(object sender, EventArgs e)
     {
         var button = sender as Button;
         if (button != null)
