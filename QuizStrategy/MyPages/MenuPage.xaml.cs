@@ -59,7 +59,7 @@ public partial class MenuPage : ContentPage
     {
         try
         {
-            throw new NotImplementedException();
+            Application.Current.MainPage = new StatPage();
         }
         catch (Exception ex)
         {

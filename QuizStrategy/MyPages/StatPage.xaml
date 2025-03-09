@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizStrategy.StatPage"
+             Title="StatPage"
+             BackgroundColor="#000000"
+             Padding="10">
+    <ScrollView x:Name="MainScrollView"
+            VerticalOptions="Fill">
+        <Grid x:Name="MainGrid"
+              RowDefinitions="Auto, Auto, *, Auto"
+              RowSpacing="20"
+              HorizontalOptions="Center"
+              VerticalOptions="Fill">
+
+            <!-- Надпись "Quiz Strategy" -->
+            <Label x:Name="QuizStrategyLabel"
+                   Grid.Row="0"
+                   Text="Quiz Strategy"
+                   TextColor="#FFFFFF"
+                   FontSize="48"
+                   FontFamily="OpenSansRegular"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <!-- Изображение карты мира -->
+            <Image x:Name="WorldMapImage"
+                   Grid.Row="1"
+                   Source="worldmap.png"
+                   WidthRequest="406"
+                   HeightRequest="0"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"/>
+
+            <!-- Пустая строка для растяжки -->
+            <BoxView x:Name="SpacerBoxView"
+                     Grid.Row="2"
+                     BackgroundColor="Transparent"/>
+
+            <!-- Серый контейнер -->
+            <Frame x:Name="GrayContainerFrame"
+                   Grid.Row="3"
+                   BackgroundColor="#535353"
+                   BorderColor="Transparent"
+                   CornerRadius="10"
+                   Padding="10"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Start">
+
+                <VerticalStackLayout x:Name="FormStackLayout"
+                                 Spacing="10">
+
+                    <!-- Надпись "Регистрация" -->
+                    <Label x:Name="StatTitleLabel"
+                       Text="Статистика"
+                       TextColor="#FFFFFF"
+                       FontSize="40"
+                       FontFamily="OpenSansRegular"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+                    <!-- Краткая статистика -->
+                    <Frame x:Name="StatFrame"
+                       BackgroundColor="Transparent"
+                       BorderColor="Transparent"
+                       CornerRadius="10"
+                       Padding="0, 15, 0, 15"
+                       HorizontalOptions="Fill">
+
+                        <VerticalStackLayout x:Name="GameModeLayout"
+                                             Spacing="0">
+                            <Label x:Name="UserNameLabel"
+                                   Text="Пользователь: Иван"
+                                   TextColor="#FFFFFF"
+                                   FontSize="18"
+                                   FontFamily="OpenSansRegular"
+                                   VerticalTextAlignment="Center"/>
+
+                            <Label x:Name="UserRaitingLabel"
+                                   Text="Рейтинг: 1234"
+                                   TextColor="#FFFFFF"
+                                   FontSize="18"
+                                   FontFamily="OpenSansRegular"
+                                   VerticalTextAlignment="Center"/>
+
+                            <Label x:Name="UserTopLabel"
+                                   Text="Топ: 12%"
+                                   TextColor="#FFFFFF"
+                                   FontSize="18"
+                                   FontFamily="OpenSansRegular"
+                                   VerticalTextAlignment="Center"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                    <Label Text="Статистика последних игр:"
+                           TextColor="#FFFFFF"
+                           FontSize="24"
+                           FontFamily="OpenSansRegular"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+                    <!-- Стаститика последних игр -->
+                    <Grid x:Name="ButtonsGrid"
+                      ColumnDefinitions="*,*,*"
+                      ColumnSpacing="5"
+                      HorizontalOptions="Fill">
+                        
+                        <Frame BackgroundColor="Transparent"
+                               CornerRadius="0"
+                               Padding="2"
+                               HorizontalOptions="Fill"
+                               Grid.Column="0">
+
+                            <VerticalStackLayout Spacing="0">
+                                <Label Text="1 место"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Label Text="1234 + 20"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Label Text="5000 очков"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent"
+                               CornerRadius="0"
+                               Padding="2"
+                               HorizontalOptions="Fill"
+                               Grid.Column="1">        
+
+                            <VerticalStackLayout Spacing="0">
+                                <Label Text="2 место"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Label Text="1224 + 10"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Label Text="3400 очков"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent"
+                               CornerRadius="0"
+                               Padding="2"
+                               HorizontalOptions="Fill"
+                               Grid.Column="3">
+
+                            <VerticalStackLayout Spacing="0">
+                                <Label Text="1 место"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Label Text="1234 + 20"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Label Text="5000 очков"
+                                       TextColor="#FFFFFF"
+                                       FontSize="18"
+                                       FontFamily="OpenSansRegular"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+                            </VerticalStackLayout>
+                        </Frame>
+
+                    </Grid>
+                    
+                    <Label Text="Достижения:"
+                           TextColor="#FFFFFF"
+                           FontSize="24"
+                           FontFamily="OpenSansRegular"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="Transparent"
+                           CornerRadius="0"
+                           Padding="2"
+                           HorizontalOptions="Fill"
+                           Grid.Column="3">     
+
+                        <VerticalStackLayout Spacing="0">
+                            <Label Text="Всего игр: 1234"
+                                   TextColor="#FFFFFF"
+                                   FontSize="18"
+                                   FontFamily="OpenSansRegular"
+                                   VerticalTextAlignment="Center"/>
+
+                            <Label Text="Среднее количество очков: 4300"
+                                   TextColor="#FFFFFF"
+                                   FontSize="18"
+                                   FontFamily="OpenSansRegular"
+                                   VerticalTextAlignment="Center"/>
+
+                            <Label Text="Лучшая серия побед: 5"
+                                   TextColor="#FFFFFF"
+                                   FontSize="18"
+                                   FontFamily="OpenSansRegular"
+                                   VerticalTextAlignment="Center"/>
+
+                            <Label Text="Лучший рейтинг: 1315
+"
+                                   TextColor="#FFFFFF"
+                                   FontSize="18"
+                                   FontFamily="OpenSansRegular"
+                                   VerticalTextAlignment="Center"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Круг приглушённого зелёного цвета -->
+                    <Ellipse Fill="#4CAF50"
+                             WidthRequest="120"
+                             HeightRequest="120"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Stroke="Black"
+                             StrokeThickness="2" />
+
+                    <!-- Кнопка "В главное меню" -->
+                    <Button x:Name="ToMenuButton"
+                            Text="В главное меню"
+                            LineBreakMode="WordWrap"
+                            BackgroundColor="#FFFFFF"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            HorizontalOptions="Fill"
+                            TextColor="#000000"
+                            FontSize="24"
+                            FontFamily="OpenSansBold"
+                            Pressed="Button_Pressed"
+                            Released="Button_Released"
+                            Clicked="ToMenuButton_Clicked"/>
+
+
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>
