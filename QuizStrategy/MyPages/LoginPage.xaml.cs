@@ -7,7 +7,7 @@ public partial class LoginPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void RegisterButton_Clicked(object sender, EventArgs e)
+    /*private void RegisterButton_Clicked(object sender, EventArgs e)
     {
         try
         {
@@ -72,5 +72,5 @@ public partial class LoginPage : ContentPage
             await button.ScaleTo(1, 100, Easing.SinIn); // Возвращаем масштаб за 100 мс
             button.BackgroundColor = Color.FromArgb("#FFFFFF"); // Возвращаем цвет
         }
-    }
+    }*/
 }

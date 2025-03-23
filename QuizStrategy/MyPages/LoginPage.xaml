@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:QuizStrategy.ViewModels"
              x:Class="QuizStrategy.LoginPage"
              BackgroundColor="#000000"
              Padding="10">
+    <ContentPage.BindingContext>
+        <viewmodels:LoginViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView x:Name="MainScrollView"
                 VerticalOptions="Fill">
@@ -72,6 +76,7 @@
                            Padding="0"
                            HorizontalOptions="Fill">
                         <Entry x:Name="LoginEntry"
+                               Text="{Binding Login}"
                                BackgroundColor="Transparent"
                                HorizontalOptions="Fill"
                                HeightRequest="50"
@@ -91,6 +96,7 @@
                            Padding="5"
                            HorizontalOptions="Fill">
                         <Entry x:Name="PasswordEntry"
+                               Text="{Binding Password}"
                                BackgroundColor="Transparent"
                                HorizontalOptions="Fill"
                                HeightRequest="50"
@@ -116,9 +122,7 @@
                                 TextColor="#000000"
                                 FontSize="20"
                                 FontFamily="OpenSansBold"
-                                Pressed="RegisterButton_Pressed"
-                                Released="RegisterButton_Released"
-                                Clicked="RegisterButton_Clicked" />
+                                Command="{Binding GoToRegisterCommand}" />
 
                         <!-- Кнопка "ВХОД" -->
                         <Button x:Name="ToMenuButton"
@@ -131,9 +135,7 @@
                                 TextColor="#000000"
                                 FontSize="24"
                                 FontFamily="OpenSansBold"
-                                Pressed="ToMenuButton_Pressed"
-                                Released="ToMenuButton_Released"
-                                Clicked="ToMenuButton_Clicked"/>
+                                Command="{Binding LoginCommand}"/>
                     </Grid>
                 </VerticalStackLayout>
             </Frame>
